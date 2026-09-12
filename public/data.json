@@ -93,10 +93,30 @@
     "id": "git",
     "name": "Git",
     "category": "Tools",
-    "description": "A distributed version control system used to track code changes and collaborate with development teams.",
+    "description": "A distributed version control system used to track code changes teams.",
     "icon": "https://icon.icepanel.io/Technology/svg/Git.svg",
     "rating": 4.9,
     "difficulty": "Beginner-Friendly",
     "badge": "Essential"
-  }
+  },
+  {
+  "id": "redux",
+  "name": "Redux",
+  "category": "Frontend",
+  "description": "A predictable state management library for JavaScript applications.",
+  "icon": "https://icon.icepanel.io/Technology/svg/Redux.svg",
+  "rating": 4.7,
+  "difficulty": "Intermediate",
+  "badge": "Popular"
+},
+{
+  "id": "firebase",
+  "name": "Firebase",
+  "category": "Backend",
+  "description": "A Google platform that provides backend services such as authentication, and analytics.",
+  "icon": "https://icon.icepanel.io/Technology/svg/Firebase.svg",
+  "rating": 4.6,
+  "difficulty": "Beginner-Friendly",
+  "badge": "Popular"
+}
 ]
