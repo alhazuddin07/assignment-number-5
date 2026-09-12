@@ -1,10 +1,17 @@
+import { RxCross2 } from "react-icons/rx";
 import type { Icard } from "../types/card";
 
 interface YourStackProps {
     stack: Icard[];
+    onRemove: (id: string) => void;
+    onRemoveAll: () => void;
 }
 
-const YourStack = ({ stack }: YourStackProps) => {
+const YourStack = ({
+    stack,
+    onRemove,
+    onRemoveAll
+}: YourStackProps) => {
 
     return (
         <div className="w-150 shadow-sm mt-6 rounded-2xl">
@@ -15,11 +22,10 @@ const YourStack = ({ stack }: YourStackProps) => {
                     Your Stack
                 </h2>
 
-
                 <p className="pb-3 text-[#94A3B8] text-[18px]">
                     {stack.length === 0
                         ? "No technologies selected yet."
-                        : `${stack.length} technology selected.`
+                        : `${stack.length} Technology Selected`
                     }
                 </p>
 
@@ -32,38 +38,66 @@ const YourStack = ({ stack }: YourStackProps) => {
 
                 ) : (
 
-                    <div className="space-y-3">
+                    <>
+                        {/* Selected Technologies */}
 
-                        {stack.map((tech) => (
+                        <div className="space-y-2">
 
-                            <div
-                                key={tech.id}
-                                className="flex items-center gap-3 border p-3 rounded-lg"
-                            >
+                            {stack.map((tech) => (
 
-                                <img
-                                    src={tech.icon}
-                                    alt={tech.name}
-                                    className="w-8"
-                                />
+                                <div
+                                    key={tech.id}
+                                    className="flex items-center justify-between border border-[#D9E2EC] p-3 rounded-xl"
+                                >
 
-                                <div>
+                                    {/* Left side */}
 
-                                    <h3 className="font-bold">
-                                        {tech.name}
-                                    </h3>
+                                    <div className="flex items-center gap-3">
 
-                                    <p className="text-sm text-gray-500">
-                                        {tech.category}
-                                    </p>
+                                        <img
+                                            src={tech.icon}
+                                            alt={tech.name}
+                                            className="w-10 h-10"
+                                        />
+
+                                        <div>
+
+                                            <h3 className="font-bold">
+                                                {tech.name}
+                                            </h3>
+
+                                            <p className="text-xs text-[#94A3B8]">
+                                                {tech.category}
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    {/* Remove X */}
+
+                                    <button
+                                        onClick={() => onRemove(tech.id)}
+                                        className="text-3xl text-[#94A3B8] hover:text-red-500"
+                                    >
+                                        <RxCross2 />
+                                    </button>
 
                                 </div>
 
-                            </div>
+                            ))}
 
-                        ))}
+                        </div>
 
-                    </div>
+                        <button
+                            onClick={onRemoveAll}
+                            className="btn btn-outline btn-error w-full mt-16 rounded-xl text-xl"
+                        >
+                            Remove All
+                        </button>
+
+                    </>
 
                 )}
 

@@ -83,7 +83,7 @@
     "id": "docker",
     "name": "Docker",
     "category": "DevOps",
-    "description": "A platform that packages applications and dependencies into lightweight and portable containers.",
+    "description": "A platform that packages applications and portable containers.",
     "icon": "https://icon.icepanel.io/Technology/svg/Docker.svg",
     "rating": 4.8,
     "difficulty": "Intermediate",

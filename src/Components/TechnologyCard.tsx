@@ -15,7 +15,6 @@ const TechnologyCard = ({
     return (
         <div className="card card-body shadow-sm space-y-3">
 
-            {/* Icon + Badge */}
             <div className="flex justify-between">
 
                 <img
@@ -30,23 +29,16 @@ const TechnologyCard = ({
 
             </div>
 
-
-            {/* Name */}
             <div className="text-2xl font-bold">
                 {card.name}
             </div>
 
-
-            {/* Description */}
             <div>
                 {card.description}
             </div>
 
-
             <div className="divider"></div>
 
-
-            {/* Information */}
             <div className="flex justify-between items-center">
 
                 <div className="bg-[#F1F5F9] px-3 rounded-md">
@@ -67,8 +59,6 @@ const TechnologyCard = ({
 
             </div>
 
-
-            {/* Button */}
             <div className="mt-6">
 
                 <button
@@ -76,7 +66,7 @@ const TechnologyCard = ({
                     disabled={isSelected}
                     className="btn btn-neutral btn-block rounded-md"
                 >
-                    {isSelected ? "Added" : "Add to Stack"}
+                    {isSelected ? "✓ Added to Stack" : "Add to Stack"}
                 </button>
 
             </div>

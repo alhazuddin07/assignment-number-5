@@ -1,6 +1,4 @@
 import { Suspense } from "react";
-
-
 import type { Icard } from "./types/card";
 import Nav from "./Components/Nav";
 import Banner from "./Components/Banner";
