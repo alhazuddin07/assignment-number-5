@@ -1,5 +1,3 @@
-import type { SrvRecord } from "dns";
-
 export interface Icard{
     id: string,
     name: string,
