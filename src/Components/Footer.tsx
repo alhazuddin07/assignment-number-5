@@ -1,4 +1,3 @@
-import React from 'react';
 import FLogo from '../assets/logo-text.png'
 
 const Footer = () => {
