@@ -1,12 +1,16 @@
 import { use, useState } from "react";
+
 import type { Icard } from "../types/card";
 
 import TechnologyCard from "./TechnologyCard";
 import YourStack from "./YourStack";
+import { toast } from "react-toastify";
+
 
 interface CardsProps {
     cardsPromise: Promise<Icard[]>;
 }
+
 
 const Card = ({ cardsPromise }: CardsProps) => {
 
@@ -16,33 +20,46 @@ const Card = ({ cardsPromise }: CardsProps) => {
 
     const handleAdd = (card: Icard) => {
 
-        setStack((previousStack) => {
+        if (stack.some((item) => item.id === card.id)) {
+            return;
+        }
 
-            if (
-                previousStack.some(
-                    (item) => item.id === card.id
-                )
-            ) {
-                return previousStack;
-            }
+        toast.success(`${card.name} added successfully`);
 
-            return [...previousStack, card];
-        });
+        setStack((previousStack) => [
+            ...previousStack,
+            card
+        ]);
     };
 
     const handleRemove = (id: string) => {
+
+        const removedTech = stack.find(
+            (item) => item.id === id
+        );
 
         setStack((previousStack) =>
             previousStack.filter(
                 (item) => item.id !== id
             )
         );
+
+        if (removedTech) {
+            toast.success(
+                `${removedTech.name} removed successfully`
+            );
+        }
     };
 
     const handleRemoveAll = () => {
 
         setStack([]);
+
+        toast.warning(
+            "All technologies removed!"
+        );
     };
+
 
     return (
         <div className="container mx-auto">

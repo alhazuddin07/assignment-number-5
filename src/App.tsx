@@ -21,8 +21,8 @@ function App() {
 
             <Suspense fallback={<div>Loading...</div>}>
                 <Card cardsPromise={cardsPromise} />
+                <Footer />
             </Suspense>
-            <Footer />
 
         </>
     );
