@@ -44,7 +44,6 @@ const Card = ({ cardsPromise }: CardsProps) => {
         setStack([]);
     };
 
-
     return (
         <div className="container mx-auto">
 

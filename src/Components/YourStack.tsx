@@ -39,8 +39,6 @@ const YourStack = ({
                 ) : (
 
                     <>
-                        {/* Selected Technologies */}
-
                         <div className="space-y-2">
 
                             {stack.map((tech) => (
@@ -49,8 +47,6 @@ const YourStack = ({
                                     key={tech.id}
                                     className="flex items-center justify-between border border-[#D9E2EC] p-3 rounded-xl"
                                 >
-
-                                    {/* Left side */}
 
                                     <div className="flex items-center gap-3">
 
@@ -74,9 +70,6 @@ const YourStack = ({
 
                                     </div>
 
-
-                                    {/* Remove X */}
-
                                     <button
                                         onClick={() => onRemove(tech.id)}
                                         className="text-3xl text-[#94A3B8] hover:text-red-500"
@@ -92,7 +85,7 @@ const YourStack = ({
 
                         <button
                             onClick={onRemoveAll}
-                            className="btn btn-outline btn-error w-full mt-16 rounded-xl text-xl"
+                            className="btn btn-error w-full mt-16 rounded-xl text-xl"
                         >
                             Remove All
                         </button>
