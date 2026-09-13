@@ -14,9 +14,7 @@ function App() {
 
     return (
         <>
-
             <Nav />
-
             <Banner />
 
             <Suspense fallback={<div>Loading...</div>}>
