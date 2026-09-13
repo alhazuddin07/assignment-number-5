@@ -1,32 +1,66 @@
-# React + TypeScript + Vite
+# 🚀 DevStack
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+> Build Your Ideal Development Stack
 
-Currently, two official plugins are available:
+DevStack is a modern web application that helps developers explore and compare different technologies and build their ideal development stack for their next project.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+You can browse technologies from different categories such as Frontend, Backend, Database, and Tools, check their details, and add your preferred technologies to your personal stack.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the Oxlint configuration
+### 1. 🔍 Explore Technologies
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+Browse different development technologies and explore useful information such as:
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+- Technology name
+- Category
+- Description
+- Difficulty level
+- Rating
+- Technology badge
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+### 2. 🧩 Build Your Own Stack
+
+Add your favorite technologies to your personal development stack and easily see which technologies you have selected for your project.
+
+### 3. 📱 Responsive Design
+
+DevStack is fully responsive and works smoothly across different screen sizes, including:
+
+- 📱 Mobile
+- 💻 Tablet
+- 🖥️ Desktop
+
+---
+
+## 🛠️ Technologies Used
+
+This project was built using the following technologies:
+
+- **React.js** – Frontend library
+- **TypeScript** – Type-safe JavaScript
+- **Tailwind CSS** – Styling and responsive design
+- **DaisyUI** – UI components
+- **Vite** – Development and build tool
+
+---
+
+## 📸 Project Overview
+
+DevStack provides a clean and modern interface where developers can explore technologies and create a personalized development stack.
+
+### Main Sections
+
+- 🏠 Hero / Banner Section
+- 💻 Technology Cards
+- 🧩 Selected Stack
+- 📱 Responsive Navigation
+- 🔗 Footer
+
+---
+
+## 🎯 Project Goal
+
+The main goal of DevStack is to make it easier for developers to discover technologies and organize the tools they want to use in their next project.
