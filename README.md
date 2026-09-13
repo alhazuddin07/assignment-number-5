@@ -64,3 +64,43 @@ DevStack provides a clean and modern interface where developers can explore tech
 ## 🎯 Project Goal
 
 The main goal of DevStack is to make it easier for developers to discover technologies and organize the tools they want to use in their next project.
+
+
+
+
+
+---
+
+# 📚 React Questions & Answers
+
+## 1. What is JSX, and why is it used in React?
+
+JSX stands for JavaScript XML. It allows us to write HTML-like code inside JavaScript or TypeScript.
+
+It makes React code easier to read and helps us create UI components in a simple way.
+
+---
+
+## 2. What is the difference between props and state?
+
+**Props** are used to pass data from a parent component to a child component. Props are read-only.
+
+**State** is used to store and manage data that can change inside a component.
+
+In simple words:
+
+- **Props →** Data comes from the parent.
+- **State →** Data is managed inside the component.
+
+---
+
+## 3. What does the `useState` hook do, and where did you use it in this project?
+
+The `useState` hook is used to create and manage changing data inside a React component.
+
+In this project, I used `useState` to manage the selected technologies in the user's development stack.
+
+For example:
+
+```tsx
+const [selectedStack, setSelectedStack] = useState<Icard[]>([]);
