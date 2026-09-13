@@ -64,7 +64,7 @@ const Card = ({ cardsPromise }: CardsProps) => {
     return (
         <div className="container mx-auto">
 
-            <div>
+            <div className="text-center md:text-left">
                 <h1 className="text-4xl font-bold py-1.5">
                     Explore the{" "}
                     <span className="text-pink-500">
@@ -77,9 +77,9 @@ const Card = ({ cardsPromise }: CardsProps) => {
                 </p>
             </div>
 
-            <div className="flex justify-between gap-5">
+            <div className="md:flex md:justify-between gap-5">
 
-                <div className="grid grid-cols-3 gap-4 mt-6">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
 
                     {cards.map((card) => (
 

@@ -15,22 +15,26 @@ const TechnologyCard = ({
     return (
         <div className="card card-body shadow-sm space-y-3">
 
-            <div className="flex justify-between">
+            <div className="flex justify-between items-start">
 
-                <img
-                    className="w-10"
-                    src={card.icon}
-                    alt={card.name}
-                />
+                <div className="flex items-center gap-3 md:block">
+
+                    <img
+                        className="w-10"
+                        src={card.icon}
+                        alt={card.name}
+                    />
+
+                    <div className="text-2xl font-bold md:mt-3">
+                        {card.name}
+                    </div>
+
+                </div>
 
                 <span className="badge badge-xs badge-warning text-[17px] p-4 rounded-2xl">
                     {card.badge}
                 </span>
 
-            </div>
-
-            <div className="text-2xl font-bold">
-                {card.name}
             </div>
 
             <div>

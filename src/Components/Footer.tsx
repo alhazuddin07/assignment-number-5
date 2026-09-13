@@ -1,35 +1,45 @@
-import FLogo from '../assets/logo-text.png'
+import FLogo from '../assets/logo-text.png';
 
 const Footer = () => {
     return (
         <footer className="mt-9">
 
-            <div className='divider'></div>
+            <div className="divider"></div>
 
-            <div className="container mx-auto px-6 py-10">
+            <div className="container mx-auto px-4 sm:px-6 py-8 md:py-10">
 
-                <div className="flex justify-between gap-8">
+                <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
 
-                    {/* About */}
-                    <div>
-                        <h2 className="text-xl font-bold">
-                            <img src={FLogo} alt="" />
+                    <div className="text-center md:text-left">
+
+                        <h2 className="text-xl font-bold flex justify-center md:justify-start">
+                            <img
+                                src={FLogo}
+                                alt="Dev Stack"
+                                className="w-auto"
+                            />
                         </h2>
 
-                        <p className="mt-3 text-sm leading-6 text-gray-500">
-                            Curated tools, technologies, and resources for developers building
-                            modern software.
+                        <p className="mt-3 text-sm leading-6 text-gray-500 max-w-md">
+                            Curated tools, technologies, and resources for developers
+                            building modern software.
                         </p>
 
-                        <div className='flex gap-6 mt-3 font-semibold'>
+                        <div className="flex justify-center md:justify-start gap-6 mt-3 font-semibold text-gray-600">
                             <p>GitHub</p>
+
+                            <span className='sm:block md:hidden'>•</span>
+
                             <p>Twitter</p>
-                            <p>Linkedin</p>
+
+                            <span className='sm:block md:hidden'>•</span>
+
+                            <p>LinkedIn</p>
                         </div>
+
                     </div>
 
-                    {/* Product */}
-                    <div>
+                    <div className="hidden md:block">
                         <h3 className="font-semibold text-gray-800">
                             Product
                         </h3>
@@ -41,8 +51,7 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    {/* Company */}
-                    <div>
+                    <div className="hidden md:block">
                         <h3 className="font-semibold text-gray-800">
                             Company
                         </h3>
@@ -54,8 +63,7 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    {/* Legal */}
-                    <div>
+                    <div className="hidden md:block">
                         <h3 className="font-semibold text-gray-800">
                             Legal
                         </h3>
@@ -68,15 +76,20 @@ const Footer = () => {
 
                 </div>
 
-                <div className='divider'></div>
+                <div className="divider"></div>
 
-                {/* Copyright */}
-                <div className="flex justify-between mt-6 text-xs text-gray-400">
-                    <div className='text-[16px]'>© 2026 DevStack. All rights reserved.</div>
-                    <div className='flex gap-6 text-[16px]'>
+                <div className="flex flex-col sm:flex-row justify-between items-center 
+                                gap-4 mt-6 text-xs text-gray-400">
+
+                    <div className="text-center sm:text-left">
+                        © 2026 Dev Stack. All rights reserved.
+                    </div>
+
+                    <div className="flex gap-5">
                         <p>Privacy</p>
                         <p>Terms</p>
                     </div>
+
                 </div>
 
             </div>
