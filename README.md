@@ -99,8 +99,3 @@ In simple words:
 The `useState` hook is used to create and manage changing data inside a React component.
 
 In this project, I used `useState` to manage the selected technologies in the user's development stack.
-
-For example:
-
-```tsx
-const [selectedStack, setSelectedStack] = useState<Icard[]>([]);
